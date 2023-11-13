@@ -1,0 +1,247 @@
+*{  box-sizing: border-box;
+    margin: 0;
+ }
+
+ body{font-family: Roboto;}
+
+/*** Header ***/
+nav .logo { 
+    height: 2rem;
+    width: auto;  
+    padding: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;}
+    
+.recherche_localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Grey-2, #EAEAEA);
+    padding: 15px; 
+    } 
+
+#localisation {
+    border: none;
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    }
+
+.recherche_localisation input{
+        width: 120px;
+    }
+
+/*** Main ***/
+/*explorer*/
+.explorer{padding: 10px 0 80px 0;
+    background: var(--Background, #F6F6F6) }
+.explorer h4{ 
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    }
+.explorer p{ 
+    padding: 10px;
+    text-align: center;
+    }
+
+ /**Button Explorer**/   
+.explorer button{
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+    font-size: 1em;
+    max-width: 100%;
+    color: white;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 10px; cursor: pointer ;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+.explorer button:hover {
+    transform: scale(1.1);
+    }
+
+/**Fonctionnement**/
+#titreh4 {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: left;
+}
+.fonctionnement{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    
+}
+.fonctionnement, li {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    list-style: none;
+}
+
+.bulle{ 
+    display: flex;
+    background-color: #9356DC;
+    color: #fff;
+    width: 27px;
+    height: 25px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    position: relative;
+    margin-right: -25px;
+    }
+
+
+.fonctionnement button {
+    width: 100%;
+    background-color: #F6F6F6;
+    height: 60px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    display: flex; align-items: center;
+    justify-content: center;
+
+}
+
+.icone { 
+    position: relative;
+    left: 50px;
+    bottom: -21px;
+}
+
+/***Restaurants***/
+.carte_menu {
+    flex-direction: column;
+}
+.carte_menu a {text-decoration: none;}
+
+.carte {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 90%; 
+    max-width: 800px; 
+    height: 15em;
+    margin: 10px; 
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.carte img {
+    width: 100%;
+    height: 10em;
+    display: block;
+    object-fit: cover;
+    
+}
+
+.carte_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.fa-regular.fa-heart{
+    font-size: 20px;
+}
+
+.carte_info .titre_menu_h5 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+    color: black;
+    
+}
+
+.carte_info , p  {
+    font-size: 0.9em;
+    color: grey;
+}
+.infogenerale{
+    padding: 20px;
+}
+
+/***Footer***/
+
+footer {
+    background: var(--Grey, #353535);
+    padding: 20px;
+    flex-direction: column;
+}
+footer ul {color: white;}
+
+.logo_footer{
+    filter: brightness(0) invert(1);
+    margin: 10px;
+    width: 6em;
+    height: 1.5em;
+}
+footer i {margin-right: 10px;}
+
+/**Responsive Media queries Deskop pour la 1ére page d'accueil**/
+
+
+/***/
+
+/*Menu*/
+.fa-solid.fa-arrow-left {
+    position: relative;
+    top: 40px;
+    left: 7%; 
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+}
+
+nav a {
+    text-decoration: none;
+  }
+
+.imgheader {
+    
+    width: 100%;
+    height: 250px;
+ 
+}
+
+.imgheader img {
+    width: 100%;
+    height: 30%; 
+    display: block;
+    object-fit: cover;
+    top:100px ;
+    position: absolute;
+}
+
+.list-menu{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background: var(--Background, #F6F6F6);
+    padding-top: 20px;
+    position: relative;   
+}
+
+#titre-menu{
+    padding-left: 25px;
+    font-family: 'Shrikhand', serif; 
+}
