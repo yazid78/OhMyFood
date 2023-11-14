@@ -322,7 +322,6 @@ nav a {
 }
 .commander:hover{transform: scale(1.1);}
 
-
 .title_heart{
     display: flex; 
     justify-content: space-between}
