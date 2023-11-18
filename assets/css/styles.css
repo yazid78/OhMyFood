@@ -1,0 +1,489 @@
+@charset "UTF-8";
+/*Variable*/
+/*Mixin*/
+/*** Header ***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav .logo {
+  height: 2rem;
+  width: auto;
+  padding: 5px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.recherche_localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+  padding: 15px;
+}
+.recherche_localisation input {
+  width: 120px;
+}
+
+#localisation {
+  border: none;
+  color: #000;
+  padding: 5px;
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+}
+
+/*** Main ***/
+/***explorer***/
+.explorer {
+  padding: 10px 0 80px 0;
+  background: #F6F6F6;
+}
+.explorer h4 {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+}
+.explorer p {
+  padding: 10px;
+  text-align: center;
+}
+
+/**Button Explorer**/
+.explorer button {
+  border-radius: 25px;
+  height: 50px;
+  width: 200px;
+  font-size: 1em;
+  max-width: 100%;
+  color: #FFF;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.explorer button:hover {
+  transform: scale(1.1);
+}
+
+/**fonctionnement__ul**/
+#titreh4 {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.fonctionnement {
+  margin-bottom: 60px;
+}
+
+.fonctionnement__ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  list-style: none;
+}
+.fonctionnement__ul button {
+  width: 100%;
+  background-color: #F6F6F6;
+  height: 60px;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__ul button:hover {
+  filter: brightness(0.9);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.fonctionnement__li {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  list-style: none;
+}
+
+.fonctionnement__bulle {
+  display: flex;
+  background-color: #9356DC;
+  color: #FFF;
+  width: 27px;
+  height: 25px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  position: relative;
+  margin-right: -25px;
+}
+
+.icone {
+  position: relative;
+  left: 50px;
+  bottom: -21px;
+}
+
+/***Restaurants***/
+.carte_menu {
+  flex-direction: column;
+  background: #F6F6F6;
+}
+.carte_menu a {
+  text-decoration: none;
+}
+
+.carte {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  height: 15em;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.carte img {
+  width: 100%;
+  height: 10em;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carte_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #000;
+}
+.carte_info .titre_menu_h5 {
+  margin: 0 0 10px;
+  font-size: 1.4em;
+  color: #000;
+}
+
+.fa-regular.fa-heart {
+  font-size: 20px;
+}
+
+#titreh4 {
+  margin: 20px;
+  padding-top: 30px;
+}
+
+p {
+  font-size: 0.9em;
+  color: #000;
+}
+
+.infogenerale {
+  padding: 20px;
+}
+
+.span {
+  padding: 0.5rem 0.75rem;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 25px;
+  right: 32px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/***Footer***/
+footer {
+  background: #353535;
+  padding: 20px;
+  flex-direction: column;
+}
+footer ul {
+  color: #FFF;
+  padding: 0;
+}
+footer i {
+  margin-right: 10px;
+}
+footer li {
+  margin: 10px;
+  list-style: none;
+}
+footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.logo_footer {
+  filter: brightness(0) invert(1);
+  margin: 10px;
+  width: 6em;
+  height: 1.5em;
+}
+
+/**Responsive Media queries Deskop pour la 1ére page d'accueil**/
+@media screen and (min-width: 1024px) {
+  .fonctionnement__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonctionnement__ul li {
+    margin: 10px;
+    flex: 1;
+  }
+  .fonctionnement__ul button {
+    width: 100%;
+    display: flex;
+  }
+  .fonctionnement__bulle {
+    margin-right: 20px;
+    position: relative;
+    padding: 7px;
+    left: 60px;
+  }
+  .icone {
+    margin-right: 22px;
+  }
+  .carte_menu {
+    flex-direction: row;
+  }
+  .carte_menu a {
+    width: 35em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .carte_menu_rangee_une {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  .carte_menu_rangee_deux {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  .carte {
+    width: 100%;
+  }
+  .menu_list {
+    margin: 0 200px;
+    padding: 0 150px;
+  }
+  .fa-solid.fa-arrow-left {
+    display: block;
+    margin-left: 5px;
+  }
+  /***Footer min 1024px***/
+  footer {
+    background: #353535;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  footer ul {
+    display: flex;
+    color: white;
+    margin-left: 900px;
+  }
+  footer li {
+    display: flex;
+    color: white;
+    width: 8em;
+  }
+  .taille_conteneur_li {
+    width: 13em;
+  }
+  .logo_footer {
+    filter: brightness(0) invert(1);
+    margin: 10px;
+    width: 6em;
+    height: 1.5em;
+    margin-left: 30px;
+  }
+  footer i {
+    margin-right: 10px;
+  }
+  #marginrightfooter {
+    margin-right: 40px;
+  }
+}
+/*** Version Tablette***/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carte_menu {
+    flex-direction: row;
+  }
+  .carte_menu_rangee_une {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  .carte_menu_rangee_deux {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  .carte_menu a {
+    width: 35em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .carte {
+    width: 100%;
+  }
+  .menu_list {
+    margin: 0 200px;
+  }
+}
+/*Menu.html 1,2,3,4 header*/
+.fa-solid.fa-arrow-left {
+  position: relative;
+  top: 40px;
+  left: 7%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 25px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.imgheader {
+  width: 100%;
+  height: 250px;
+}
+.imgheader img {
+  width: 100%;
+  height: 30%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 100px;
+  position: absolute;
+}
+
+/*** Menu liste ***/
+#menu-title {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: "Shrikhand";
+}
+
+.menu_title_underline {
+  margin-top: 40px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  position: relative;
+}
+.menu_title_underline::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 3px;
+  background-color: #000;
+}
+
+.title_heart {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+.title_heart .fa-regular.fa-heart {
+  margin-right: 50px;
+  margin-top: 8px;
+  font-size: 30px;
+  margin-right: 50px;
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.menu_list {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #353535;
+  padding-top: 20px;
+  position: relative;
+}
+
+.menu_item {
+  background-color: #FFF;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.menu_item h4 {
+  margin: 0 0 10px;
+}
+
+.item_details {
+  flex-grow: 1;
+}
+
+.item_under_details {
+  color: #000;
+}
+
+.item_price {
+  margin-top: 20px;
+  color: #353535;
+  font-weight: bold;
+  text-align: right;
+}
+
+.commander {
+  border-radius: 25px;
+  height: 50px;
+  width: 170px;
+  font-size: 1em;
+  max-width: 100%;
+  color: #FFF;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.commander:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */

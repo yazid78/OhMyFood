@@ -27,7 +27,7 @@ nav .logo {
     color: black;
     padding: 5px;
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     text-align: center;
     }
 
@@ -77,29 +77,34 @@ nav .logo {
     transform: scale(1.1);
     }
 
-/**Fonctionnement**/
+/**fonctionnement__ul**/
 #titreh4 {
     font-size: 1.5rem;
     padding: 10px;
     margin-top: 15px;
     text-align: left;
 }
-.fonctionnement{ 
+.fonctionnement{margin-bottom: 60px;}
+
+.fonctionnement__ul{ 
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0;
-    
+    padding: 0;}
+
+.fonctionnement__ul button:hover{ 
+    filter: brightness(0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-.fonctionnement, li {
+.fonctionnement__ul , .fonctionnement__li {
     display: flex;
     width: 100%;
     margin: 10px;
     list-style: none;
 }
 
-.bulle{ 
+.fonctionnement__bulle{ 
     display: flex;
     background-color: #9356DC;
     color: #fff;
@@ -114,7 +119,7 @@ nav .logo {
     }
 
 
-.fonctionnement button {
+.fonctionnement__ul button {
     width: 100%;
     background-color: #F6F6F6;
     height: 60px;
@@ -125,7 +130,6 @@ nav .logo {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     display: flex; align-items: center;
     justify-content: center;
-
 }
 
 .icone { 
@@ -135,12 +139,15 @@ nav .logo {
 }
 
 /***Restaurants***/
+
 .carte_menu {
     flex-direction: column;
+    background: var(--Background, #F6F6F6);;
 }
 .carte_menu a {text-decoration: none;}
 
 .carte {
+    position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 90%; 
     max-width: 800px; 
@@ -150,8 +157,7 @@ nav .logo {
     margin-left: auto;
     margin-right:auto ;
     border-radius: 20px;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 .carte img {
@@ -175,18 +181,31 @@ nav .logo {
 .carte_info .titre_menu_h5 {
     margin: 0 0 10px;
     font-size: 1.4em;
-    color: black;
-    
+    color: black;  
 }
+
+#titreh4{
+    margin: 20px;
+    padding-top: 30px;}
 
 .carte_info , p  {
     font-size: 0.9em;
-    color: grey;
+    color: black;
 }
 .infogenerale{
     padding: 20px;
 }
 
+.span {
+    padding: 0.5rem 0.75rem;
+    background-color: #99E2D0;
+    color: #008766;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 25px;
+    right: 32px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
 /***Footer***/
 
 footer {
@@ -207,16 +226,160 @@ footer ul {
 }
 footer i {margin-right: 10px;}
 
+footer li {
+    margin: 10px;
+    list-style: none;}
+
+footer a {
+    color: white;
+    text-decoration: none;}
+
 /**Responsive Media queries Deskop pour la 1ére page d'accueil**/
+@media screen and (min-width: 1024px) {
+    .fonctionnement__ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .fonctionnement__ul li {
+      margin: 10px;
+      flex: 1; 
+    }
+  
+    .fonctionnement__bulle {
+      margin-right: 20px;
+      position: relative;
+      padding: 7px;
+      left: 60px;
+    }
+    .icone {
+      margin-right: 22px;
+    }
+  
+    .fonctionnement__ul button {
+      width: 100%;
+      display: flex;
+    }
+
+    .carte_menu{ flex-direction: row;  }
+
+    .carte_menu_rangee_une{
+      display: flex; gap: 40px;
+      justify-content: center;}
+  
+    .carte_menu_rangee_deux{
+      display: flex;
+      gap: 40px;   
+      justify-content: center;
+    }
+    .carte_menu a {
+        width: 35em;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .carte{ width: 100%}
+
+    .menu_list {
+        margin: 0 200px;
+        padding: 0 150px;
+        }
+
+   .fa-solid.fa-arrow-left {
+        display: block;
+        margin-left: 5px;        
+   }
+        
+
+    /***Footer***/
+
+    footer {
+        background: var(--Grey, #353535);
+        display: flex;
+        flex-direction: row-reverse; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer ul {
+        display: flex;
+        color: white; 
+        margin-left: 900px;
+    }
+
+    footer li {
+        display: flex;
+        color: white; 
+        width: 8em;     
+    }
+
+    .taille_conteneur_li{
+        width: 13em ;
+    }
+    
+    
+    .logo_footer {
+        filter: brightness(0) invert(1);
+        margin: 10px;
+        width: 6em;
+        height: 1.5em;
+        margin-left: 30px;
+    }
+    
+    footer i {
+        margin-right: 10px;
+    }
+
+    #marginrightfooter{
+        margin-right: 40px;
+    }
+
+}
+    
+
+  
+  /*** Version Tablette***/
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .carte_menu{ flex-direction: row; }
+
+  .carte_menu_rangee_une{
+    display: flex; gap: 40px;
+    justify-content: center;}
+
+  .carte_menu_rangee_deux{
+    display: flex;
+    gap: 40px;   
+    justify-content: center;}
+
+    .carte_menu a {
+        width: 35em;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .carte{ width: 100%}
+
+    
+    .menu_list {
+        margin: 0 200px;
+        }
+
+        
+}
+/**Responsive**/
 
 
-/***/
 
-/*Menu 1,2,3,4 header*/
+
+
+/*Menu.html 1,2,3,4 header*/
 .fa-solid.fa-arrow-left {
     position: relative;
     top: 40px;
     left: 7%; 
+    width: 40px;
     display: flex;
     align-items: center;
     color: black;
@@ -228,10 +391,8 @@ nav a {
   }
 
 .imgheader {
-    
     width: 100%;
     height: 250px;
- 
 }
 
 .imgheader img {
@@ -243,7 +404,7 @@ nav a {
     position: absolute;
 }
 
-/*Menu liste*/
+/*** Menu liste ***/
 
 #menu-title{
     padding-left: 20px;
@@ -256,7 +417,19 @@ nav a {
     margin-top: 40px;
     padding-left: 20px;
     margin-bottom: 20px;
-    font-size: 14px;}
+    font-size: 14px;
+    position: relative;
+}
+
+.menu_title_underline::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 3px; 
+    background-color: #99E2D0; 
+}
 
 .title_heart{
     display: flex; 
@@ -295,7 +468,7 @@ nav a {
   }
   
   .item_under_details {
-    color: #555;
+    color: black;
   }
   
   .item_price {margin-top: 20px;
