@@ -212,7 +212,7 @@ nav .logo {
   overflow: hidden;
 }
 .carte:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .carte img {
   width: 100%;
@@ -236,7 +236,7 @@ nav .logo {
 }
 
 .fa-regular.fa-heart {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #titreh4 {
@@ -460,7 +460,7 @@ nav a {
   left: 20px;
   width: 40px;
   height: 3px;
-  background-color: #000;
+  background-color: #99E2D0;
 }
 
 .title_heart {
@@ -481,7 +481,7 @@ nav a {
 .menu_list {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  background-color: #353535;
+  background-color: #F6F6F6;
   padding-top: 20px;
   position: relative;
 }
@@ -495,15 +495,8 @@ nav a {
   display: flex;
   justify-content: space-between;
 }
-.menu_item:hover {
-  transform: scale(1.1);
-}
 .menu_item h4 {
   margin: 0 0 10px;
-}
-
-.menu_item {
-  transform: scale(1.1);
 }
 
 .item_details {
@@ -515,7 +508,8 @@ nav a {
 }
 
 .item_price {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
   color: #353535;
   font-weight: bold;
   text-align: right;
@@ -539,4 +533,88 @@ nav a {
 }
 .commander:hover {
   transform: scale(1.1);
+}
+
+/*Animation*/
+.fas.fa-check-circle {
+  color: #FFF;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_item {
+  position: relative;
+  transition: 330ms ease-in-out;
+}
+.menu_item:active, .menu_item:hover {
+  padding-right: 58px;
+}
+.menu_item:active .encoche, .menu_item:hover .encoche {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+.menu_item .encoche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 330ms ease-in-out, transform 330ms ease-in-out;
+}
+
+/***heart***/
+.heart {
+  position: relative;
+}
+
+.fa-solid.fa-heart {
+  color: #FF79DA;
+  position: absolute;
+  left: 0px;
+  margin-top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: color 0.3s ease-in-out;
+}
+.fa-solid.fa-heart:hover, .fa-solid.fa-heart:active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.coeur {
+  position: relative;
+}
+
+.coeur .fa-solid.fa-heart {
+  color: #FF79DA;
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  margin-top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: color 0.3s ease-in-out;
+}
+.coeur .fa-solid.fa-heart:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+.coeur .fa-solid.fa-heart:active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
 }/*# sourceMappingURL=styles.css.map */
