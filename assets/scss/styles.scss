@@ -76,56 +76,67 @@ nav {
 
 
 /*** Main ***/
-.preloader{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $couleur_gen_beige;
-	z-index: 20;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $couleur_gen_beige;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    animation: fadeOut 3s forwards; 
 
-	h1{
-		color: $couleursecondaire;
-		font-size: 3.5rem;
-		font-family: $font-family_Texte_gen;
-	}
+    h1 {
+        color: $couleursecondaire;
+        font-size: 3.5rem;
+        font-family: $font-family_Texte_gen;
+    }
 
-	.loader{
-		display: block;
-		width: 100px;
-		height: 100px ;
-		position: relative;
-	}
+    .loader {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+
+    .loader::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border: 7px solid $couleurtertiaire_span;
+        border-color: $couleurtertiaire_span transparent $couleurprimaire transparent;
+        border-radius: 50%;
+        animation: loader 3s infinite ease-in-out;
+    }
 }
-	.loader::before{
-		content: "";
-		width: 100px;
-		height: 100px;
-		position: absolute;
-		border: 7px solid $couleurtertiaire_span;
-		border-color: $couleurtertiaire_span transparent $couleurprimaire transparent;
-		border-radius: 50%;
-		animation: loader 1s infinite ease-in-out;
-}
-
-
-
-
 
 @keyframes loader {
-	0%{
-		transform: rotate(0deg);
-	}
-	100%{
-		transform: rotate(360deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
 
 
 /***explorer***/
@@ -512,6 +523,7 @@ nav {
 	border-top-left-radius: 25px;
 	background-color: $couleur_gen_beige;
 	padding-top: 20px;
+	padding-bottom: 5px;
 	position: relative;
 }
 .menu_item {
@@ -524,6 +536,16 @@ nav {
 	justify-content: space-between;
 	h4 {
 		margin: 0 0 10px;
+		max-width: 280px;
+		overflow: hidden;
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+	}
+	p{
+		max-width: 220px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 }
 

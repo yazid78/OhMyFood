@@ -54,6 +54,8 @@ nav .logo {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  opacity: 1;
+  animation: fadeOut 3s forwards;
 }
 .preloader h1 {
   color: #FF79DA;
@@ -66,8 +68,7 @@ nav .logo {
   height: 100px;
   position: relative;
 }
-
-.loader::before {
+.preloader .loader::before {
   content: "";
   width: 100px;
   height: 100px;
@@ -75,7 +76,7 @@ nav .logo {
   border: 7px solid #99E2D0;
   border-color: #99E2D0 transparent #9356DC transparent;
   border-radius: 50%;
-  animation: loader 1s infinite ease-in-out;
+  animation: loader 3s infinite ease-in-out;
 }
 
 @keyframes loader {
@@ -84,6 +85,18 @@ nav .logo {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 /***explorer***/
@@ -483,6 +496,7 @@ nav a {
   border-top-left-radius: 25px;
   background-color: #F6F6F6;
   padding-top: 20px;
+  padding-bottom: 5px;
   position: relative;
 }
 
@@ -497,6 +511,16 @@ nav a {
 }
 .menu_item h4 {
   margin: 0 0 10px;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_item p {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .item_details {
