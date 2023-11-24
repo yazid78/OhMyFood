@@ -48,12 +48,14 @@ body {
 }
 
 nav {
-	.logo {
+	.ohmyfood_logo{
+		font-family: $font-family_titre_logo;
 		height: 2rem;
+		font-size: 25px;
 		width: auto;
 		padding: 5px;
-		margin: 10px;
-		@include displayblock_margin_auto();
+		display: flex;
+		justify-content: center;
 	}
 }
 .recherche_localisation {
@@ -89,7 +91,7 @@ nav {
     justify-content: center;
     flex-direction: column;
     opacity: 1;
-    animation: fadeOut 3s forwards; 
+    animation: disparaitre 3s forwards; 
 
     h1 {
         color: $couleursecondaire;
@@ -125,7 +127,7 @@ nav {
     }
 }
 
-@keyframes fadeOut {
+@keyframes disparaitre {
     0% {
         opacity: 1;
     }
@@ -619,6 +621,55 @@ nav {
 		transition: opacity 330ms ease-in-out, transform 330ms ease-in-out;
 	}
 }
+
+.entree { 
+    animation-duration: 2s;
+    animation-name: Entree;
+}
+
+.plat { 
+    animation-duration: 4s; 
+    animation-name: Plat;
+}
+
+.dessert { 
+    animation-duration: 6s; 
+    animation-name: Dessert;
+}
+
+@keyframes Entree {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Plat {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Dessert {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 
 /***heart***/
