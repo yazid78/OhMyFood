@@ -47,17 +47,24 @@ body {
 	font-family: $font-family_Texte_gen;
 }
 
-nav {
-	.ohmyfood_logo{
-		font-family: $font-family_titre_logo;
-		height: 2rem;
-		font-size: 25px;
-		width: auto;
-		padding: 5px;
-		display: flex;
-		justify-content: center;
-	}
+.ohmyfood_logo_nav{
+	font-family: $font-family_titre_logo;
+	height: 2rem;
+	font-size: 30px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
 }
+.ohmyfood_logo_nav_index{
+	font-family: $font-family_titre_logo;
+	height: 2rem;
+	font-size: 30px;
+	padding: 5px;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+}
+
 .recherche_localisation {
 	@include flex;
 	background: $nav_input;
@@ -317,17 +324,21 @@ footer {
 	li {
 		margin: 10px;
 		list-style: none;
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 	a {
 		color: $white;
 		text-decoration: none;
 	}
 }
-.logo_footer {
+.ohmyfood_logo_footer {
 	filter: brightness(0) invert(1);
-	margin: 10px;
-	width: 6em;
-	height: 1.5em;
+	font-family: $font-family_titre_logo;
+	font-size: 20px;
+	
 }
 
 /**Responsive Media queries Deskop pour la 1ére page d'accueil**/
@@ -533,26 +544,25 @@ nav {
 	margin: 10px;
 	padding: 15px;
 	border-radius: 15px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-between;
-	h4 {
+	
+.item_details {
+	flex-grow: 1;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+		h4 {
 		margin: 0 0 10px;
 		max-width: 280px;
 		overflow: hidden;
     	text-overflow: ellipsis;
-    	white-space: nowrap;
 	}
-	p{
-		max-width: 220px;
+		p{
 		overflow: hidden;
 		text-overflow: ellipsis;
-		white-space: nowrap;
+		}
 	}
-}
-
-.item_details {
-	flex-grow: 1;
 }
 .item_under_details {
 	color: $black;
@@ -598,6 +608,7 @@ nav {
 	transition: 330ms ease-in-out;
 	&:active,
 	&:hover {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 		padding-right: 58px;
 		.encoche {
 			opacity: 1;

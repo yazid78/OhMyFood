@@ -11,12 +11,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-nav .ohmyfood_logo {
+.ohmyfood_logo_nav {
   font-family: "Shrikhand";
   height: 2rem;
-  font-size: 25px;
-  width: auto;
+  font-size: 30px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.ohmyfood_logo_nav_index {
+  font-family: "Shrikhand";
+  height: 2rem;
+  font-size: 30px;
+  padding: 5px;
+  margin: 20px;
   display: flex;
   justify-content: center;
 }
@@ -294,16 +303,19 @@ footer li {
   margin: 10px;
   list-style: none;
 }
+footer li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 footer a {
   color: #FFF;
   text-decoration: none;
 }
 
-.logo_footer {
+.ohmyfood_logo_footer {
   filter: brightness(0) invert(1);
-  margin: 10px;
-  width: 6em;
-  height: 1.5em;
+  font-family: "Shrikhand";
+  font-size: 20px;
 }
 
 /**Responsive Media queries Deskop pour la 1ére page d'accueil**/
@@ -505,26 +517,24 @@ nav a {
   margin: 10px;
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
 }
-.menu_item h4 {
+.menu_item .item_details {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_item .item_details h4 {
   margin: 0 0 10px;
   max-width: 280px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
-.menu_item p {
-  max-width: 220px;
+.menu_item .item_details p {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.item_details {
-  flex-grow: 1;
 }
 
 .item_under_details {
@@ -573,6 +583,7 @@ nav a {
   transition: 330ms ease-in-out;
 }
 .menu_item:active, .menu_item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   padding-right: 58px;
 }
 .menu_item:active .encoche, .menu_item:hover .encoche {
