@@ -9,16 +9,27 @@
 
 body {
   font-family: "Roboto", sans-serif;
-}
-
-nav .logo {
-  height: 2rem;
-  width: auto;
-  padding: 5px;
-  margin: 10px;
+  min-width: 290px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+}
+
+.ohmyfood_logo_nav {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.ohmyfood_logo_nav_index {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .recherche_localisation {
@@ -29,7 +40,7 @@ nav .logo {
   padding: 15px;
 }
 .recherche_localisation input {
-  width: 120px;
+  width: 130px;
 }
 
 #localisation {
@@ -42,6 +53,63 @@ nav .logo {
 }
 
 /*** Main ***/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  animation: disparaitre 3s forwards;
+}
+.preloader h1 {
+  color: #FF79DA;
+  font-size: 3.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.preloader .loader {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.preloader .loader::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 7px solid #99E2D0;
+  border-color: #99E2D0 transparent #9356DC transparent;
+  border-radius: 50%;
+  animation: loader 3s infinite ease-in-out;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disparaitre {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 /***explorer***/
 .explorer {
   padding: 10px 0 80px 0;
@@ -79,7 +147,7 @@ nav .logo {
 }
 
 /**fonctionnement__ul**/
-#titreh4 {
+.titreh4 {
   font-size: 1.5rem;
   padding: 10px;
   margin-top: 15px;
@@ -115,7 +183,6 @@ nav .logo {
   align-items: center;
 }
 .fonctionnement__ul button:hover {
-  filter: brightness(0.9);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -168,6 +235,9 @@ nav .logo {
   border-radius: 20px;
   overflow: hidden;
 }
+.carte:hover {
+  transform: scale(1.05);
+}
 .carte img {
   width: 100%;
   height: 10em;
@@ -190,7 +260,7 @@ nav .logo {
 }
 
 .fa-regular.fa-heart {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #titreh4 {
@@ -235,16 +305,22 @@ footer li {
   margin: 10px;
   list-style: none;
 }
+footer li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 footer a {
   color: #FFF;
   text-decoration: none;
 }
+footer .fa-solid.fa-handshake-angle {
+  width: 15px;
+}
 
-.logo_footer {
+.ohmyfood_logo_footer {
   filter: brightness(0) invert(1);
-  margin: 10px;
-  width: 6em;
-  height: 1.5em;
+  font-family: "Shrikhand";
+  font-size: 20px;
 }
 
 /**Responsive Media queries Deskop pour la 1ére page d'accueil**/
@@ -414,7 +490,7 @@ nav a {
   left: 20px;
   width: 40px;
   height: 3px;
-  background-color: #000;
+  background-color: #99E2D0;
 }
 
 .title_heart {
@@ -435,8 +511,9 @@ nav a {
 .menu_list {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  background-color: #353535;
+  background-color: #F6F6F6;
   padding-top: 20px;
+  padding-bottom: 5px;
   position: relative;
 }
 
@@ -445,24 +522,29 @@ nav a {
   margin: 10px;
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
 }
-.menu_item h4 {
-  margin: 0 0 10px;
-}
-
-.item_details {
+.menu_item .item_details {
   flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.item_under_details {
-  color: #000;
+.menu_item .item_details h4 {
+  margin: 0 0 10px;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu_item .item_details p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item_price {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
   color: #353535;
   font-weight: bold;
   text-align: right;
@@ -486,5 +568,134 @@ nav a {
 }
 .commander:hover {
   transform: scale(1.1);
-}/*# sourceMappingURL=styles.css.map */
+}
 
+/*Animation*/
+.fas.fa-check-circle {
+  color: #FFF;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_item {
+  position: relative;
+  transition: 330ms ease-in-out;
+}
+.menu_item:active, .menu_item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding-right: 58px;
+}
+.menu_item:active .encoche, .menu_item:hover .encoche {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+.menu_item .encoche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 330ms ease-in-out, transform 330ms ease-in-out;
+}
+
+.entree {
+  animation-duration: 2s;
+  animation-name: Entree;
+}
+
+.plat {
+  animation-duration: 4s;
+  animation-name: Plat;
+}
+
+.dessert {
+  animation-duration: 6s;
+  animation-name: Dessert;
+}
+
+@keyframes Entree {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes Plat {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes Dessert {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/***heart***/
+.heart {
+  position: relative;
+}
+
+.fa-solid.fa-heart {
+  color: #FF79DA;
+  position: absolute;
+  left: 0px;
+  margin-top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: color 0.3s ease-in-out;
+}
+.fa-solid.fa-heart:hover, .fa-solid.fa-heart:active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.coeur {
+  position: relative;
+}
+
+.coeur .fa-solid.fa-heart {
+  color: #FF79DA;
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  margin-top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: color 0.3s ease-in-out;
+}
+.coeur .fa-solid.fa-heart:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+.coeur .fa-solid.fa-heart:active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}/*# sourceMappingURL=styles.css.map */

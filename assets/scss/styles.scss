@@ -45,11 +45,14 @@ $font-family_titre_logo: 'Shrikhand';
 
 body {
 	font-family: $font-family_Texte_gen;
+	min-width: 290px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 
 .ohmyfood_logo_nav{
 	font-family: $font-family_titre_logo;
-	height: 2rem;
 	font-size: 30px;
 	padding: 5px;
 	display: flex;
@@ -57,7 +60,6 @@ body {
 }
 .ohmyfood_logo_nav_index{
 	font-family: $font-family_titre_logo;
-	height: 2rem;
 	font-size: 30px;
 	padding: 5px;
 	margin: 20px;
@@ -187,7 +189,7 @@ body {
 }
 
 /**fonctionnement__ul**/
-#titreh4 {
+.titreh4 {
 	font-size: 1.5rem;
 	padding: 10px;
 	margin-top: 15px;
@@ -333,6 +335,7 @@ footer {
 		color: $white;
 		text-decoration: none;
 	}
+	.fa-solid.fa-handshake-angle {width: 15px;}
 }
 .ohmyfood_logo_footer {
 	filter: brightness(0) invert(1);
@@ -564,9 +567,7 @@ nav {
 		}
 	}
 }
-.item_under_details {
-	color: $black;
-}
+
 .item_price {
 	display: flex;
 	align-items: center;

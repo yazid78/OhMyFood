@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*Variable*/
-/*Mixin*/
+
 /*** Header ***/
 * {
   box-sizing: border-box;
@@ -9,11 +8,14 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  min-width: 290px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ohmyfood_logo_nav {
   font-family: "Shrikhand";
-  height: 2rem;
   font-size: 30px;
   padding: 5px;
   display: flex;
@@ -22,7 +24,6 @@ body {
 
 .ohmyfood_logo_nav_index {
   font-family: "Shrikhand";
-  height: 2rem;
   font-size: 30px;
   padding: 5px;
   margin: 20px;
@@ -145,7 +146,7 @@ body {
 }
 
 /**fonctionnement__ul**/
-#titreh4 {
+.titreh4 {
   font-size: 1.5rem;
   padding: 10px;
   margin-top: 15px;
@@ -310,6 +311,9 @@ footer li:hover {
 footer a {
   color: #FFF;
   text-decoration: none;
+}
+footer .fa-solid.fa-handshake-angle {
+  width: 15px;
 }
 
 .ohmyfood_logo_footer {
@@ -535,10 +539,6 @@ nav a {
 .menu_item .item_details p {
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.item_under_details {
-  color: #000;
 }
 
 .item_price {
