@@ -587,11 +587,11 @@ nav a {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   padding-right: 58px;
 }
-.menu_item:active .encoche, .menu_item:hover .encoche {
+.menu_item:active .coche, .menu_item:hover .coche {
   opacity: 1;
   transform: translateX(-50px);
 }
-.menu_item .encoche {
+.menu_item .coche {
   display: flex;
   justify-content: center;
   align-items: center;
