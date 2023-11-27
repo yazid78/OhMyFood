@@ -9,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 290px;
+  min-width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -151,7 +151,7 @@ body {
   font-size: 1.5rem;
   padding: 10px;
   margin-top: 15px;
-  text-align: left;
+  margin-left: 15px;
 }
 
 .fonctionnement {
@@ -163,10 +163,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0;
   display: flex;
   width: 100%;
-  margin: 10px;
+  padding: 10px;
   list-style: none;
 }
 .fonctionnement__ul button {
@@ -209,7 +208,7 @@ body {
 
 .icone {
   position: relative;
-  left: 50px;
+  left: 40px;
   bottom: -21px;
 }
 
@@ -346,6 +345,9 @@ footer .fa-solid.fa-handshake-angle {
   }
   .icone {
     margin-right: 22px;
+    position: relative;
+    left: 50px;
+    bottom: -21px;
   }
   .carte_menu {
     flex-direction: row;
@@ -582,6 +584,7 @@ nav a {
 .menu_item {
   position: relative;
   transition: 330ms ease-in-out;
+  overflow-x: hidden;
 }
 .menu_item:active, .menu_item:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
