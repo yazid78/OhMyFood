@@ -191,6 +191,11 @@ body {
   margin: 10px;
   list-style: none;
 }
+.fonctionnement__li button {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
 
 .fonctionnement__bulle {
   display: flex;
@@ -216,6 +221,7 @@ body {
 .carte_menu {
   flex-direction: column;
   background: #F6F6F6;
+  padding-bottom: 80px;
 }
 .carte_menu a {
   text-decoration: none;
@@ -226,7 +232,6 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 800px;
-  height: 15em;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -262,9 +267,8 @@ body {
   font-size: 30px;
 }
 
-#titreh4 {
-  margin: 20px;
-  padding-top: 30px;
+.titreh4 {
+  padding-top: 80px;
 }
 
 p {
