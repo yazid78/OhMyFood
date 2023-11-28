@@ -15,9 +15,11 @@ OhMyFood Paris vise à révolutionner l'expérience gastronomique en permettant 
 Maquettes et Sources
 
 Les maquettes du site, développées par notre UX designer, sont disponibles dans le dossier "Maquettes" et peuvent être consultées sur Figma via le lien suivant :
+
 https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1
 
 Spécifications Techniques
+
 Langages Utilisés:
 
    - HTML
